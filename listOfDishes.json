@@ -1,5 +1,19 @@
 {
   "product": [
-
+    {
+          "name": "Молоко 3.2%",
+          "weight": 150,
+          "calories": 60,
+          "proteins": 3.2,
+          "fats": 3.2,
+          "carbohydrates": 4.8
+        },
+    {
+          "name": "Молоко 3.2%",
+          "calories": 60,
+          "proteins": 3.2,
+          "fats": 3.2,
+          "carbohydrates": 4.8
+        }
   ]
 }
