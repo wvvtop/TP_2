@@ -1,19 +1,23 @@
-{
-  "product": [
-    {
-          "name": "Молоко 3.2%",
-          "weight": 150,
-          "calories": 60,
-          "proteins": 3.2,
-          "fats": 3.2,
-          "carbohydrates": 4.8
+[
+    [
+        {
+            "category": "Молочное",
+            "name": "Творог 9%",
+            "calories": 235.5,
+            "proteins": 24.0,
+            "fats": 13.5,
+            "carbohydrates": 3.0,
+            "weight": 150.0,
+            "index": 2
         },
-    {
-          "name": "Молоко 3.2%",
-          "calories": 60,
-          "proteins": 3.2,
-          "fats": 3.2,
-          "carbohydrates": 4.8
+        {
+            "category": "Сладкое",
+            "name": "Вафли",
+            "calories": 810.0,
+            "proteins": 7.5,
+            "fats": 45.0,
+            "carbohydrates": 90.0,
+            "weight": 150.0
         }
-  ]
-}
+    ]
+]
