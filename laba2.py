@@ -24,16 +24,20 @@ def get_products(type_of_product):
         return this_products
 
 def print_all_products(list_of_dict_of_products):
-    if len(list_of_dict_of_products) == 0:
+    if not list_of_dict_of_products:  # Проверка на пустой список
         print("Список пуст")
-    elif "index" in list_of_dict_of_products[0]:
-        for product in list_of_dict_of_products:
-            print(f"{product["index"]}. {product["name"]} {product["category"]} (Ккал: {product["calories"]} Белки: {product["proteins"]} "
-                    f"Жиры: {product["fats"]} Углеводы: {product["carbohydrates"]})")
-    elif "index" not in list_of_dict_of_products[0]:
-        for product in list_of_dict_of_products:
-            print(f"{product["name"]} {product["category"]} (Ккал: {product["calories"]} Белки: {product["proteins"]} "
-                    f"Жиры: {product["fats"]} Углеводы: {product["carbohydrates"]})")
+        return
+
+    for product in list_of_dict_of_products:
+        if "index" in product:  # Проверяем, есть ли ключ "index"
+            print(f"{product['index']}. {product['name']} {product['category']} "
+                    f"(Ккал: {product['calories']}, Белки: {product['proteins']}, "
+                    f"Жиры: {product['fats']}, Углеводы: {product['carbohydrates']})")
+        else:
+            print(f"{product['name']} {product['category']} "
+                    f"(Ккал: {product['calories']}, Белки: {product['proteins']}, "
+                    f"Жиры: {product['fats']}, Углеводы: {product['carbohydrates']})")
+
 
 
 def print_categories():
@@ -107,6 +111,10 @@ def yes_no():
         else:
             print("Ошибка, введите заново!")
 
+
+import copy
+
+
 def calculate():
     temp_list_of_products = []
     while True:
@@ -117,18 +125,15 @@ def calculate():
             if not yes_no():
                 print("Хотите ли сохранить в файл? (да/нет)")
                 if yes_no():
+                    # Перед сохранением удаляем index из всех продуктов
+                    for product in temp_list_of_products:
+                        product.pop("index", None)
                     save_json(temp_list_of_products)
                     return
-            # if s == "да":
-            #     save_json(temp_list_of_products)
-            #     return
-            # elif s == "нет":
-            #     return
-            # else:
-            #     print("Ошибка, введите заново!")
 
+        # Создаём полную копию списка продуктов, чтобы не изменять оригинал
+        this_products = copy.deepcopy(products)
 
-        this_products = list(products)
         print("Нужны ли какие-то фильтры при работе? (да/нет)")
         if yes_no():
             print("Введите номера фильтров через пробел:\n"
@@ -137,26 +142,29 @@ def calculate():
                   "3. сортировать по: калорийность, белки, жиры или углеводы\n"
                   " или нажмите интер, чтобы пропустить")
             filters = input().strip().split()
+
             if "1" in filters:
                 print("Введите категорию или введите '0.' чтобы не вводить фильтр")
                 print_categories()
                 while True:
                     category = input()
                     if category.lower() in [i.lower() for i in get_categories()]:
-                        this_products = [p for p in products if p["category"] == category.capitalize()]
+                        this_products = [p for p in this_products if p["category"] == category.capitalize()]
                         break
                     elif category == "0":
                         break
                     else:
                         print("Такой категории нет, введи заново!")
+
             if "2" in filters:
                 print("Введите число для сортировки меньше введенного или введите '0.' чтобы не вводить фильтр")
                 num = input_num_more_0()
                 if num == 0:
                     break
                 this_products = [i for i in this_products if i["calories"] < num]
+
             if "3" in filters:
-                print("сортировать по (0. отмена): 1. калорийность, 2. белки, 3. жиры или 4. углеводы ")
+                print("Сортировать по (0. отмена): 1. калорийность, 2. белки, 3. жиры или 4. углеводы ")
                 while True:
                     num = input()
                     if num == "0":
@@ -174,46 +182,69 @@ def calculate():
                         this_products = sorted(this_products, key=lambda p: p["carbohydrates"], reverse=True)
                         break
 
-            print_all_products(this_products)
+        if not this_products:
+            print("Итоговый список пуст")
+            continue
 
-        for i in range(len(this_products)):
-            this_products[i]["index"] = i + 1
+        # Добавляем индекс к продуктам (но только в копии, а не в оригинале!)
+        for i, product in enumerate(this_products, start=1):
+            product["index"] = i
+
         print_all_products(this_products)
+
         product_index = input_num_more_0()
-        if any(product["index"] == product_index for product in this_products):
-            product = next((product for product in this_products if product["index"] == product_index), None)
-            print("Введите в граммах продукт или для отменты введите '0':")
+        product = next((p for p in this_products if p["index"] == product_index), None)
+
+        if product:
+            print("Введите в граммах продукт или для отмены введите '0':")
             product_weight = input_num_more_0()
             if product_weight == 0:
                 continue
-            elif product_weight > 0:
-                product["weight"] = product_weight
-                product["calories"] = round(product_weight / 100 * product["calories"], 2)
-                product["proteins"] = round(product_weight / 100 * product["proteins"], 2)
-                product["fats"] = round(product_weight / 100 * product["fats"], 2)
-                product["carbohydrates"] = round(product_weight / 100 * product["carbohydrates"], 2)
-                del product["index"]
-                print_all_products([product])
-                while True:
-                    s = input("Добавить во временный список (да/нет)\n").lower().strip()
-                    if s == "да":
-                        temp_list_of_products.append(product)
-                        break
-                    elif s == "нет":
-                        break
-                    else:
-                        print("Ошибка, введите заново!")
+
+            # Создаём копию продукта перед изменениями
+            product_copy = copy.deepcopy(product)
+
+            product_copy["weight"] = product_weight
+            product_copy["calories"] = round(product_weight / 100 * product_copy["calories"], 2)
+            product_copy["proteins"] = round(product_weight / 100 * product_copy["proteins"], 2)
+            product_copy["fats"] = round(product_weight / 100 * product_copy["fats"], 2)
+            product_copy["carbohydrates"] = round(product_weight / 100 * product_copy["carbohydrates"], 2)
+
+            # Удаляем index перед добавлением в список (чтобы не сохранялся в JSON)
+            product_copy.pop("index", None)
+
+            print_all_products([product_copy])
+            while True:
+                s = input("Добавить во временный список (да/нет)\n").lower().strip()
+                if s == "да":
+                    temp_list_of_products.append(product_copy)
+                    break
+                elif s == "нет":
+                    break
+                else:
+                    print("Ошибка, введите заново!")
         else:
             print("Ошибка!")
+
+
+def demonstrate_diet():
+    with open("listOfDishes.json", "r", encoding="utf-8") as file1:
+        list_of_diet = json.load(file1)
+    for i in list_of_diet:
+        print_all_products(list(i))
+        print_all_products_specs(list(i))
+        print("----------------------")
+
 
 
 while True:
     print("Введите:\n"
           "1. Суммарные характеристики набора продуктов\n"
-          "2. Выбор по заданным характеристикам\n"
-          "3. Сортировка по одному из параметров\n"
-          "4. Вывод информации о приемах пищи")
+          "2. Вывести прошлые рационы")
 
     s = input()
     if s == "1":
         calculate()
+    elif s == "2":
+        demonstrate_diet()
+
