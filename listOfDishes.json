@@ -1,19 +1,73 @@
-{
-  "product": [
-    {
-          "name": "Молоко 3.2%",
-          "weight": 150,
-          "calories": 60,
-          "proteins": 3.2,
-          "fats": 3.2,
-          "carbohydrates": 4.8
+[
+    [
+        {
+            "category": "Молочное",
+            "name": "Творог 9%",
+            "calories": 235.5,
+            "proteins": 24.0,
+            "fats": 13.5,
+            "carbohydrates": 3.0,
+            "weight": 150.0
         },
-    {
-          "name": "Молоко 3.2%",
-          "calories": 60,
-          "proteins": 3.2,
-          "fats": 3.2,
-          "carbohydrates": 4.8
+        {
+            "category": "Мясо",
+            "name": "Куриная грудка",
+            "calories": 495.0,
+            "proteins": 93.0,
+            "fats": 10.8,
+            "carbohydrates": 0.0,
+            "weight": 300.0
         }
-  ]
-}
+    ],
+    [
+        {
+            "category": "Молочное",
+            "name": "Творог 9%",
+            "calories": 353.25,
+            "proteins": 36.0,
+            "fats": 20.25,
+            "carbohydrates": 4.5,
+            "weight": 150.0
+        }
+    ],
+    [
+        {
+            "category": "Молочное",
+            "name": "Творог 9%",
+            "calories": 235.5,
+            "proteins": 24.0,
+            "fats": 13.5,
+            "carbohydrates": 3.0,
+            "weight": 150.0
+        },
+        {
+            "category": "Молочное",
+            "name": "Сыр гауда",
+            "calories": 534.0,
+            "proteins": 37.5,
+            "fats": 40.5,
+            "carbohydrates": 3.3,
+            "weight": 150.0
+        }
+    ],
+    [
+        {
+            "category": "Молочное",
+            "name": "Творог 9%",
+            "calories": 235.5,
+            "proteins": 24.0,
+            "fats": 13.5,
+            "carbohydrates": 3.0,
+            "weight": 150.0
+        },
+        {
+            "category": "Молочное",
+            "name": "Сыр гауда",
+            "calories": 712.0,
+            "proteins": 50.0,
+            "fats": 54.0,
+            "carbohydrates": 4.4,
+            "weight": 200.0
+        }
+    ]
+]

@@ -1,204 +1,202 @@
-{
-  "categories": [
-    {
-      "name": "Молочное",
-      "products": [
-        {
-          "name": "Молоко 3.2%",
-          "calories": 60,
-          "proteins": 3.2,
-          "fats": 3.2,
-          "carbohydrates": 4.8
-        },
-        {
-          "name": "Творог 9%",
-          "calories": 157,
-          "proteins": 16,
-          "fats": 9,
-          "carbohydrates": 2
-        },
-        {
-          "name": "Сметана 20%",
-          "calories": 206,
-          "proteins": 2.8,
-          "fats": 20,
-          "carbohydrates": 3.2
-        },
-        {
-          "name": "Йогурт натуральный",
-          "calories": 66,
-          "proteins": 5,
-          "fats": 3.2,
-          "carbohydrates": 4.2
-        },
-        {
-          "name": "Сыр гауда",
-          "calories": 356,
-          "proteins": 25,
-          "fats": 27,
-          "carbohydrates": 2.2
-        }
-      ]
-    },
-    {
-      "name": "Сладкое",
-      "products": [
-        {
-          "name": "Шоколад молочный",
-          "calories": 550,
-          "proteins": 7.3,
-          "fats": 35.7,
-          "carbohydrates": 52.4
-        },
-        {
-          "name": "Печенье сахарное",
-          "calories": 450,
-          "proteins": 7,
-          "fats": 15,
-          "carbohydrates": 75
-        },
-        {
-          "name": "Мёд",
-          "calories": 329,
-          "proteins": 0.8,
-          "fats": 0,
-          "carbohydrates": 81.5
-        },
-        {
-          "name": "Вафли",
-          "calories": 540,
-          "proteins": 5,
-          "fats": 30,
-          "carbohydrates": 60
-        },
-        {
-          "name": "Карамель",
-          "calories": 390,
-          "proteins": 0.1,
-          "fats": 0.1,
-          "carbohydrates": 97
-        }
-      ]
-    },
-    {
-      "name": "Овощи",
-      "products": [
-        {
-          "name": "Картофель",
-          "calories": 77,
-          "proteins": 2,
-          "fats": 0.4,
-          "carbohydrates": 17
-        },
-        {
-          "name": "Морковь",
-          "calories": 41,
-          "proteins": 0.9,
-          "fats": 0.2,
-          "carbohydrates": 9.6
-        },
-        {
-          "name": "Капуста белокочанная",
-          "calories": 28,
-          "proteins": 1.8,
-          "fats": 0.1,
-          "carbohydrates": 4.7
-        },
-        {
-          "name": "Свекла",
-          "calories": 43,
-          "proteins": 1.6,
-          "fats": 0.2,
-          "carbohydrates": 9.6
-        },
-        {
-          "name": "Перец болгарский",
-          "calories": 31,
-          "proteins": 1,
-          "fats": 0.3,
-          "carbohydrates": 6.3
-        }
-      ]
-    },
-    {
-      "name": "Фрукты",
-      "products": [
-        {
-          "name": "Апельсин",
-          "calories": 47,
-          "proteins": 0.9,
-          "fats": 0.2,
-          "carbohydrates": 11.8
-        },
-        {
-          "name": "Груша",
-          "calories": 57,
-          "proteins": 0.4,
-          "fats": 0.3,
-          "carbohydrates": 15.2
-        },
-        {
-          "name": "Виноград",
-          "calories": 69,
-          "proteins": 0.7,
-          "fats": 0.2,
-          "carbohydrates": 18
-        },
-        {
-          "name": "Яблоко",
-          "calories": 52,
-          "proteins": 0.3,
-          "fats": 0.2,
-          "carbohydrates": 14
-        },
-        {
-          "name": "Киви",
-          "calories": 61,
-          "proteins": 1.1,
-          "fats": 0.5,
-          "carbohydrates": 14.7
-        }
-      ]
-    },
-    {
-      "name": "Мясо",
-      "products": [
-        {
-          "name": "Свинина",
-          "calories": 297,
-          "proteins": 16,
-          "fats": 27,
-          "carbohydrates": 0
-        },
-        {
-          "name": "Индейка",
-          "calories": 189,
-          "proteins": 24,
-          "fats": 8,
-          "carbohydrates": 0
-        },
-        {
-          "name": "Баранина",
-          "calories": 294,
-          "proteins": 25,
-          "fats": 21,
-          "carbohydrates": 0
-        },
-        {
-          "name": "Говядина",
-          "calories": 250,
-          "proteins": 26,
-          "fats": 17,
-          "carbohydrates": 0
-        },
-        {
-          "name": "Куриная грудка",
-          "calories": 165,
-          "proteins": 31,
-          "fats": 3.6,
-          "carbohydrates": 0
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "category": "Молочное",
+    "name": "Молоко 3.2%",
+    "calories": 60,
+    "proteins": 3.2,
+    "fats": 3.2,
+    "carbohydrates": 4.8
+  },
+  {
+    "category": "Молочное",
+    "name": "Творог 9%",
+    "calories": 157,
+    "proteins": 16,
+    "fats": 9,
+    "carbohydrates": 2
+  },
+  {
+    "category": "Молочное",
+    "name": "Сметана 20%",
+    "calories": 206,
+    "proteins": 2.8,
+    "fats": 20,
+    "carbohydrates": 3.2
+  },
+  {
+    "category": "Молочное",
+    "name": "Йогурт натуральный",
+    "calories": 66,
+    "proteins": 5,
+    "fats": 3.2,
+    "carbohydrates": 4.2
+  },
+  {
+    "category": "Молочное",
+    "name": "Сыр гауда",
+    "calories": 356,
+    "proteins": 25,
+    "fats": 27,
+    "carbohydrates": 2.2
+  },
+  {
+    "category": "Сладкое",
+    "name": "Шоколад молочный",
+    "calories": 550,
+    "proteins": 7.3,
+    "fats": 35.7,
+    "carbohydrates": 52.4
+  },
+  {
+    "category": "Сладкое",
+    "name": "Печенье сахарное",
+    "calories": 450,
+    "proteins": 7,
+    "fats": 15,
+    "carbohydrates": 75
+  },
+  {
+    "category": "Сладкое",
+    "name": "Мёд",
+    "calories": 329,
+    "proteins": 0.8,
+    "fats": 0,
+    "carbohydrates": 81.5
+  },
+  {
+    "category": "Сладкое",
+    "name": "Вафли",
+    "calories": 540,
+    "proteins": 5,
+    "fats": 30,
+    "carbohydrates": 60
+  },
+  {
+    "category": "Сладкое",
+    "name": "Карамель",
+    "calories": 390,
+    "proteins": 0.1,
+    "fats": 0.1,
+    "carbohydrates": 97
+  },
+  {
+    "category": "Овощи",
+    "name": "Картофель",
+    "calories": 77,
+    "proteins": 2,
+    "fats": 0.4,
+    "carbohydrates": 17
+  },
+  {
+    "category": "Овощи",
+    "name": "Морковь",
+    "calories": 41,
+    "proteins": 0.9,
+    "fats": 0.2,
+    "carbohydrates": 9.6
+  },
+  {
+    "category": "Овощи",
+    "name": "Капуста белокочанная",
+    "calories": 28,
+    "proteins": 1.8,
+    "fats": 0.1,
+    "carbohydrates": 4.7
+  },
+  {
+    "category": "Овощи",
+    "name": "Свекла",
+    "calories": 43,
+    "proteins": 1.6,
+    "fats": 0.2,
+    "carbohydrates": 9.6
+  },
+  {
+    "category": "Овощи",
+    "name": "Перец болгарский",
+    "calories": 31,
+    "proteins": 1,
+    "fats": 0.3,
+    "carbohydrates": 6.3
+  },
+  {
+    "category": "Фрукты",
+    "name": "Апельсин",
+    "calories": 47,
+    "proteins": 0.9,
+    "fats": 0.2,
+    "carbohydrates": 11.8
+  },
+  {
+    "category": "Фрукты",
+    "name": "Груша",
+    "calories": 57,
+    "proteins": 0.4,
+    "fats": 0.3,
+    "carbohydrates": 15.2
+  },
+  {
+    "category": "Фрукты",
+    "name": "Виноград",
+    "calories": 69,
+    "proteins": 0.7,
+    "fats": 0.2,
+    "carbohydrates": 18
+  },
+  {
+    "category": "Фрукты",
+    "name": "Яблоко",
+    "calories": 52,
+    "proteins": 0.3,
+    "fats": 0.2,
+    "carbohydrates": 14
+  },
+  {
+    "category": "Фрукты",
+    "name": "Киви",
+    "calories": 61,
+    "proteins": 1.1,
+    "fats": 0.5,
+    "carbohydrates": 14.7
+  },
+  {
+    "category": "Мясо",
+    "name": "Свинина",
+    "calories": 297,
+    "proteins": 16,
+    "fats": 27,
+    "carbohydrates": 0
+  },
+  {
+    "category": "Мясо",
+    "name": "Индейка",
+    "calories": 189,
+    "proteins": 24,
+    "fats": 8,
+    "carbohydrates": 0
+  },
+  {
+    "category": "Мясо",
+    "name": "Баранина",
+    "calories": 294,
+    "proteins": 25,
+    "fats": 21,
+    "carbohydrates": 0
+  },
+  {
+    "category": "Мясо",
+    "name": "Говядина",
+    "calories": 250,
+    "proteins": 26,
+    "fats": 17,
+    "carbohydrates": 0
+  },
+  {
+    "category": "Мясо",
+    "name": "Куриная грудка",
+    "calories": 165,
+    "proteins": 31,
+    "fats": 3.6,
+    "carbohydrates": 0
+  }
+]
